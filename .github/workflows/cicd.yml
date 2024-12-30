@@ -37,7 +37,8 @@ jobs:
 
       # Step 4: Plan Terraform Changes for QA environment
       - name: Terraform Plan
-        run: terraform plan -var "environment=qa"
+        # run: terraform plan -var "environment=qa"
+        run: terraform plan
 
   # CD Job
   terraform-cd:
@@ -69,4 +70,5 @@ jobs:
 
       # Step 5: Apply Terraform Changes for QA environment
       - name: Terraform Apply
-        run: terraform apply -auto-approve -var "environment=qa"
+        # run: terraform apply -auto-approve -var "environment=qa"
+        run: terraform apply -auto-approve
